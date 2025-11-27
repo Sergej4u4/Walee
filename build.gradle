@@ -7,11 +7,14 @@ repositories {
 
 dependencies {
     // Selenium WebDriver
-    implementation 'org.seleniumhq.selenium:selenium-java:4.14.1'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.14.1'
 
     // WebDriverManager
-    implementation 'io.github.bonigarcia:webdrivermanager:6.1.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:6.1.0'
 
     // TestNG library
     testImplementation 'org.testng:testng:7.11.0'
+}
+test {
+    useTestNG()
 }
