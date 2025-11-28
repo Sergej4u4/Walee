@@ -2,23 +2,19 @@ package walee.pages.main;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import walee.pages.base.BasePage;
 
-public class EnglishPageLight {
+public class EnglishPageLight extends BasePage {
     private WebDriver driver;
 
    private By engLangBtn = By.xpath("//a[@class='langBtn' and @data-lang='en']");
 
-
-
-
-
     public EnglishPageLight(WebDriver driver) {
-        this.driver = driver;
+        super(driver); // передаём драйвер в BasePage
     }
-
 
     public void clickEngLangBtn() {
-    driver.findElement(engLangBtn).click();
-    }
+        click(engLangBtn); // используем метод BasePage
 
+    }
 }
