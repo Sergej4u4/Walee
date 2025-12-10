@@ -29,4 +29,9 @@ public class BasePage {
         element.sendKeys(text);
     }
 
+    protected String getText(By locator) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element.getText();
+    }
+
 }
